@@ -1,0 +1,125 @@
+/* Reset de estilos padrão do body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;  /* Cor de fundo global */
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #ffffff;  /* Cor de fundo do cabeçalho */
+    color: white;  /* Cor do texto do cabeçalho */
+    text-align: center;
+    padding: 1em;  /* Espaçamento interno */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.2);  /* Sombra com efeito de elevação e sombra na parte inferior direita */
+    border-radius: 12px;
+}
+
+/* Estilos da seção principal */
+section {
+    max-width: 800px;  /* Largura máxima da seção */
+    margin: 2em auto;  /* Margens superior e inferior automáticas, margens laterais 2em */
+    padding: 2em;  /* Espaçamento interno */
+    background-color: white;  /* Cor de fundo da seção */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.2);  /* Sombra com efeito de elevação e sombra na parte inferior direita */
+    border-radius: 12px;  /* Borda arredondada */
+    text-align: center;
+}
+
+
+/* Estilos para os cabeçalhos h1 e h2 */
+h1 {
+    background: linear-gradient(to right, #cc00ff, #0077ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moveGradient 5s infinite linear;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+h2 {
+    color: #343a40;  /* Cor do texto h2 */
+}
+
+/* Estilos para os botões */
+button {
+    padding: 0.7em 1.5em;  /* Espaçamento interno */
+    font-size: 1em;  /* Tamanho da fonte */
+    cursor: pointer;  /* Cursor interativo */
+    background-color: #007bff;  /* Cor de fundo do botão */
+    color: white;  /* Cor do texto do botão */
+    border: none;  /* Sem borda */
+    border-radius: 3px;  /* Borda arredondada */
+    transition: background-color 0.3s ease;  /* Transição suave na mudança de cor de fundo */
+}
+
+/* Estilos de hover para os botões */
+button:hover {
+    background-color: #0056b3;  /* Cor de fundo alterada ao passar o mouse */
+}
+
+/* Estilos específicos para o elemento com id "wordOfDay" */
+#wordOfDay {
+    font-size: 1.5em;  /* Tamanho da fonte */
+    margin-bottom: 1em;  /* Margem inferior */
+}
+
+/* Estilos específicos para os elementos com id "significado" e "substituicao" */
+#significado, #substituicao {
+    margin-top: 1em;  /* Margem superior */
+}
+
+footer {
+    text-align: center;
+    padding: 0.1em;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    font-size: 19px;
+    font-weight: bold;
+    color: #000; /* Cor do texto quando não está na animação */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para a cor do texto */
+}
+
+a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -97px; /* Ajuste a posição para começar 50 pixels à esquerda */
+    bottom: -5px; /* Ajuste a posição para iniciar abaixo do texto */
+    width: calc(20.2% + 0px); /* Ajuste a largura para cobrir toda a largura do texto mais 50 pixels à esquerda */
+    height: 3px; /* Altura da barra sob o texto */
+    background: linear-gradient(to right, #cc00ff, #0077ff);
+    transform: scaleX(0); /* Inicialmente, a barra tem largura zero */
+    transform-origin: 0%; /* Ajusta a origem da transformação para a esquerda */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para a largura da barra */
+}
+
+a:hover {
+    color: #0400ff; /* Altera a cor do texto ao passar o mouse */
+}
+
+a:hover::after {
+    transform: scaleX(1); /* Aumenta a largura da barra ao passar o mouse */
+
+
+}
