@@ -291,3 +291,23 @@ document.addEventListener("DOMContentLoaded", function () {
         themeToggle.classList.toggle("rotate-icon", body.classList.contains("dark-theme"));
     });
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const textarea = document.querySelector('textarea');
+    const charCount = document.getElementById('charCount');
+
+    textarea.addEventListener('input', function () {
+        const remainingChars = 5000 - textarea.value.length;
+        charCount.textContent = `Caracteres restantes: ${remainingChars}`;
+    });
+});
+
+function validarFormulario() {
+    var nome = document.forms["meuForm"]["nome"].value;
+    var email = document.forms["meuForm"]["email"].value;
+    var assunto = document.forms["meuForm"]["assunto"].value;
+
+    if (nome == "" || email == "" || assunto == "") {
+        alert("Todos os campos devem ser preenchidos");
+        return false;
+    }
+}

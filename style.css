@@ -372,3 +372,61 @@ a:hover::after {
     transform: rotate(360deg);
     /* Rotaciona o ícone quando está no tema escuro */
 }
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #70515100;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    /* Permite redimensionamento vertical */
+    min-height: 100px;
+    /* Tamanho mínimo de altura em pixels (ajuste conforme necessário) */
+    font-size: 15px;
+}
+
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+input[type="submit"] {
+    background-color: #4400ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #6e9fd3;
+    color: #000;
+}
+
+#charCount {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 17px;
+    margin-top: 4px;
+    padding-bottom: 7px;
+}
