@@ -279,3 +279,15 @@ function gerarNovaPalavra() {
     document.getElementById("significado").innerText = `Significado: ${palavraDoDia.significado}`;
     document.getElementById("substituicao").innerText = `Substituição sugerida: ${palavraDoDia.substituicao}`;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const body = document.body;
+    const header = document.querySelector("header");
+    const themeToggle = document.getElementById("themeToggle");
+
+    themeToggle.addEventListener("click", function () {
+        body.classList.toggle("dark-theme");
+        header.classList.toggle("dark-theme");
+        themeToggle.classList.toggle("rotate-icon", body.classList.contains("dark-theme"));
+    });
+});

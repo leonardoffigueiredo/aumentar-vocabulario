@@ -7,15 +7,17 @@ body {
     /* Cor de fundo global */
     overflow-x: hidden;
     /* Impede a exibição da barra de rolagem horizontal */
+    transition: background-color 0.5s;
+
 }
 
 /* Estilos do cabeçalho */
 header {
     padding-top: 18px;
     background-color: #c9dfe6;
-    /* Cor de fundo do cabeçalho */
+    /* Cor de fundo do cabeçalho no tema claro */
     color: white;
-    /* Cor do texto do cabeçalho */
+    /* Cor do texto do cabeçalho no tema claro */
     text-align: center;
     font-size: 17px;
     padding-bottom: 3px;
@@ -72,21 +74,23 @@ button {
     /* Tamanho da fonte */
     cursor: pointer;
     /* Cursor interativo */
-    background-color: #007bff;
+    background-color: #4400ff;
     /* Cor de fundo do botão */
     color: white;
     /* Cor do texto do botão */
     border: none;
     /* Sem borda */
-    border-radius: 3px;
+    border-radius: 9px;
     /* Borda arredondada */
     transition: background-color 0.3s ease;
     /* Transição suave na mudança de cor de fundo */
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Estilos de hover para os botões */
 button:hover {
-    background-color: #0056b3;
+    background-color: rgb(120, 172, 233);
+    color: black;
     /* Cor de fundo alterada ao passar o mouse */
 }
 
@@ -182,7 +186,7 @@ nav a {
 }
 
 /* Estilos para a seção "Sobre Nós" */
-#about {
+.about {
     background-color: #8d9da1;
     padding: 2em;
     margin-top: 2em;
@@ -190,7 +194,7 @@ nav a {
 }
 
 /* Estilos para a seção de Contato */
-#contact {
+.contact {
     background-color: #8d9da1;
     padding: em;
     margin-top: 2em;
@@ -234,4 +238,137 @@ a:hover::after {
 .titulo-header {
     font-size: 35px;
     padding-bottom: 5px;
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme header {
+    color: #ffffff;
+    /* Cor do texto do cabeçalho no tema escuro */
+}
+
+.dark-theme .titulo-header {
+    color: #ffffff;
+    /* Cor do texto .titulo-header no tema escuro */
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme nav {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme nav ul {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme nav li {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme nav a {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme section {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-theme footer {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-theme footer a {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme a {
+
+    color: #ffffff;
+}
+
+.dark-theme {
+
+    color: #ffffff;
+}
+
+/* Estilos do ícone de alternar tema */
+.theme-icon {
+    font-size: 30px;
+    /* Ajuste o tamanho conforme necessário */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Estilos do ícone de alternar tema no tema escuro */
+.dark-theme .theme-icon {
+    color: #ffffff;
+}
+
+/* Adicione esta classe para girar a animação do ícone */
+.rotate-icon {
+    transition: transform 0.5s ease;
+}
+
+/* Restante do seu código CSS */
+
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme .rotate-icon {
+    transform: rotate(360deg);
+    /* Rotaciona o ícone quando está no tema escuro */
+}
+
+/* Adicione estilos para o ícone do sol */
+.sun-icon {
+    background: url('caminho/para/o/icone-do-sol.png') no-repeat center center;
+    width: 24px;
+    /* Ajuste conforme necessário */
+    height: 24px;
+    /* Ajuste conforme necessário */
+    background-size: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Restante do seu código CSS */
+
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme .sun-icon {
+    transform: rotate(360deg);
+    /* Rotaciona o ícone quando está no tema escuro */
+}
+
+/* Estilos do ícone de alternar tema */
+.theme-icon {
+    font-size: 30px;
+    /* Ajuste o tamanho conforme necessário */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Estilos do ícone de alternar tema no tema escuro */
+.dark-theme .theme-icon {
+    color: #ffffff;
+    transform: rotate(360deg);
+    /* Rotaciona o ícone quando está no tema escuro */
 }
