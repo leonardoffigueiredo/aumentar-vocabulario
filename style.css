@@ -3,34 +3,42 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #c9dfe6;  /* Cor de fundo global */
-    overflow-x: hidden;  /* Impede a exibição da barra de rolagem horizontal */
+    background-color: #c9dfe6;
+    /* Cor de fundo global */
+    overflow-x: hidden;
+    /* Impede a exibição da barra de rolagem horizontal */
 }
-
 
 /* Estilos do cabeçalho */
 header {
-    background-color: #c9dfe6;  /* Cor de fundo do cabeçalho */
-    color: white;  /* Cor do texto do cabeçalho */
+    padding-top: 18px;
+    background-color: #c9dfe6;
+    /* Cor de fundo do cabeçalho */
+    color: white;
+    /* Cor do texto do cabeçalho */
     text-align: center;
-    font-size: 17px;    
+    font-size: 17px;
     padding-bottom: 3px;
 }
 
 /* Estilos da seção principal */
-/* Estilos da seção principal */
 section {
     color: white;
     align-items: center;
-    max-width: 800px;  /* Largura máxima da seção */
-    margin: 4em auto;  /* Aumentada a margem superior para evitar que o rodapé tampe o conteúdo */
-    padding: 2em;  /* Espaçamento interno */
-    background-color: #8d9da1;  /* Cor de fundo da seção */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.2);  /* Sombra com efeito de elevação e sombra na parte inferior direita */
-    border-radius: 12px;  /* Borda arredondada */
+    max-width: 800px;
+    /* Largura máxima da seção */
+    margin: 4em auto;
+    /* Aumentada a margem superior para evitar que o rodapé tampe o conteúdo */
+    padding: 2em;
+    /* Espaçamento interno */
+    background-color: #8d9da1;
+    /* Cor de fundo da seção */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.2);
+    /* Sombra com efeito de elevação e sombra na parte inferior direita */
+    border-radius: 12px;
+    /* Borda arredondada */
     text-align: center;
 }
-
 
 /* Estilos para os cabeçalhos h1 e h2 */
 h1 {
@@ -45,41 +53,56 @@ h1 {
     0% {
         background-position: 0% 50%;
     }
+
     100% {
         background-position: 100% 50%;
     }
 }
 
 h2 {
-    color: #ffffff;  /* Cor do texto h2 */
+    color: #ffffff;
+    /* Cor do texto h2 */
 }
 
 /* Estilos para os botões */
 button {
-    padding: 0.7em 1.5em;  /* Espaçamento interno */
-    font-size: 1em;  /* Tamanho da fonte */
-    cursor: pointer;  /* Cursor interativo */
-    background-color: #007bff;  /* Cor de fundo do botão */
-    color: white;  /* Cor do texto do botão */
-    border: none;  /* Sem borda */
-    border-radius: 3px;  /* Borda arredondada */
-    transition: background-color 0.3s ease;  /* Transição suave na mudança de cor de fundo */
+    padding: 0.7em 1.5em;
+    /* Espaçamento interno */
+    font-size: 1em;
+    /* Tamanho da fonte */
+    cursor: pointer;
+    /* Cursor interativo */
+    background-color: #007bff;
+    /* Cor de fundo do botão */
+    color: white;
+    /* Cor do texto do botão */
+    border: none;
+    /* Sem borda */
+    border-radius: 3px;
+    /* Borda arredondada */
+    transition: background-color 0.3s ease;
+    /* Transição suave na mudança de cor de fundo */
 }
 
 /* Estilos de hover para os botões */
 button:hover {
-    background-color: #0056b3;  /* Cor de fundo alterada ao passar o mouse */
+    background-color: #0056b3;
+    /* Cor de fundo alterada ao passar o mouse */
 }
 
 /* Estilos específicos para o elemento com id "wordOfDay" */
 #wordOfDay {
-    font-size: 1.5em;  /* Tamanho da fonte */
-    margin-bottom: 1em;  /* Margem inferior */
+    font-size: 1.5em;
+    /* Tamanho da fonte */
+    margin-bottom: 1em;
+    /* Margem inferior */
 }
 
 /* Estilos específicos para os elementos com id "significado" e "substituicao" */
-#significado, #substituicao {
-    margin-top: 1em;  /* Margem superior */
+#significado,
+#substituicao {
+    margin-top: 1em;
+    /* Margem superior */
 }
 
 /* Estilos para o rodapé */
@@ -90,11 +113,11 @@ footer {
     width: 100%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
-    margin-top: 2em;  /* Adicionada a margem superior */
-    z-index: 1000;  /* Adicionado z-index para garantir que o rodapé fique acima do conteúdo */
+    margin-top: 2em;
+    /* Adicionada a margem superior */
+    z-index: 1000;
+    /* Adicionado z-index para garantir que o rodapé fique acima do conteúdo */
 }
-
-
 
 /* Estilos para links */
 a {
@@ -110,9 +133,11 @@ a::after {
     content: '';
     display: block;
     position: absolute;
-    left: 0; /* Alterado para começar no início do texto */
+    left: 0;
+    /* Alterado para começar no início do texto */
     bottom: -5px;
-    width: 100%; /* Ajustado para cobrir toda a largura do texto */
+    width: 100%;
+    /* Ajustado para cobrir toda a largura do texto */
     height: 3px;
     background: linear-gradient(to right, #cc00ff, #0077ff);
     transform: scaleX(0);
@@ -128,20 +153,20 @@ a:hover::after {
     transform: scaleX(1);
 }
 
-
 /* Estilos para o menu de navegação */
 nav {
     background-color: #8d9da1;
     padding: 1em;
     text-align: center;
-    margin-top: 9px;
+    margin-top: 9.5px;
 }
 
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 100%; /* Ocupa toda a largura disponível */
+    width: 100%;
+    /* Ocupa toda a largura disponível */
 }
 
 nav li {
@@ -171,7 +196,8 @@ nav a {
     margin-top: 2em;
     border-radius: 12px;
     padding-bottom: 20px;
-    margin-bottom: 10px; /* Adicionada a margem inferior para afastar do rodapé */
+    margin-bottom: 10px;
+    /* Adicionada a margem inferior para afastar do rodapé */
 }
 
 /* Estilos para a seção de Recursos */
@@ -183,7 +209,8 @@ section img {
 }
 
 /* Ajustes para melhorar a acessibilidade */
-button, a {
+button,
+a {
     outline: none;
 }
 
@@ -192,19 +219,19 @@ button, a {
     0% {
         background-position: 0% 50%;
     }
+
     100% {
         background-position: 100% 50%;
     }
 }
 
-
-
 /* Estilos para a animação no rodapé */
 a:hover::after {
-    transform: scaleX(1); /* Aumenta a largura da barra ao passar o mouse */
+    transform: scaleX(1);
+    /* Aumenta a largura da barra ao passar o mouse */
 }
 
 .titulo-header {
-    font-size: 30px;
+    font-size: 35px;
     padding-bottom: 5px;
 }
