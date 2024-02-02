@@ -3,25 +3,29 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;  /* Cor de fundo global */
+    background-color: #c9dfe6;  /* Cor de fundo global */
+    overflow-x: hidden;  /* Impede a exibição da barra de rolagem horizontal */
 }
+
 
 /* Estilos do cabeçalho */
 header {
-    background-color: #ffffff;  /* Cor de fundo do cabeçalho */
+    background-color: #c9dfe6;  /* Cor de fundo do cabeçalho */
     color: white;  /* Cor do texto do cabeçalho */
     text-align: center;
-    padding: 1em;  /* Espaçamento interno */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.2);  /* Sombra com efeito de elevação e sombra na parte inferior direita */
-    border-radius: 12px;
+    font-size: 17px;    
+    padding-bottom: 3px;
 }
 
 /* Estilos da seção principal */
+/* Estilos da seção principal */
 section {
+    color: white;
+    align-items: center;
     max-width: 800px;  /* Largura máxima da seção */
-    margin: 2em auto;  /* Margens superior e inferior automáticas, margens laterais 2em */
+    margin: 4em auto;  /* Aumentada a margem superior para evitar que o rodapé tampe o conteúdo */
     padding: 2em;  /* Espaçamento interno */
-    background-color: white;  /* Cor de fundo da seção */
+    background-color: #8d9da1;  /* Cor de fundo da seção */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.2);  /* Sombra com efeito de elevação e sombra na parte inferior direita */
     border-radius: 12px;  /* Borda arredondada */
     text-align: center;
@@ -46,10 +50,8 @@ h1 {
     }
 }
 
-
-
 h2 {
-    color: #343a40;  /* Cor do texto h2 */
+    color: #ffffff;  /* Cor do texto h2 */
 }
 
 /* Estilos para os botões */
@@ -80,46 +82,129 @@ button:hover {
     margin-top: 1em;  /* Margem superior */
 }
 
+/* Estilos para o rodapé */
 footer {
     text-align: center;
-    padding: 0.1em;
-    background-color: white;
-    position: fixed;
-    bottom: 0;
+    padding: 0.2em;
+    background-color: #c9dfe6;
     width: 100%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
+    margin-top: 2em;  /* Adicionada a margem superior */
+    z-index: 1000;  /* Adicionado z-index para garantir que o rodapé fique acima do conteúdo */
 }
 
+
+
+/* Estilos para links */
 a {
     text-decoration: none;
     position: relative;
     font-size: 19px;
     font-weight: bold;
-    color: #000; /* Cor do texto quando não está na animação */
-    transition: color 0.3s ease; /* Adiciona uma transição suave para a cor do texto */
+    color: #000;
+    transition: color 0.3s ease;
 }
 
 a::after {
     content: '';
     display: block;
     position: absolute;
-    left: -97px; /* Ajuste a posição para começar 50 pixels à esquerda */
-    bottom: -5px; /* Ajuste a posição para iniciar abaixo do texto */
-    width: calc(20.2% + 0px); /* Ajuste a largura para cobrir toda a largura do texto mais 50 pixels à esquerda */
-    height: 3px; /* Altura da barra sob o texto */
+    left: 0; /* Alterado para começar no início do texto */
+    bottom: -5px;
+    width: 100%; /* Ajustado para cobrir toda a largura do texto */
+    height: 3px;
     background: linear-gradient(to right, #cc00ff, #0077ff);
-    transform: scaleX(0); /* Inicialmente, a barra tem largura zero */
-    transform-origin: 0%; /* Ajusta a origem da transformação para a esquerda */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave para a largura da barra */
+    transform: scaleX(0);
+    transform-origin: 0%;
+    transition: transform 0.3s ease;
 }
 
 a:hover {
-    color: #0400ff; /* Altera a cor do texto ao passar o mouse */
+    color: #0400ff;
 }
 
 a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* Estilos para o menu de navegação */
+nav {
+    background-color: #8d9da1;
+    padding: 1em;
+    text-align: center;
+    margin-top: 9px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Estilos para a seção "Sobre Nós" */
+#about {
+    background-color: #8d9da1;
+    padding: 2em;
+    margin-top: 2em;
+    border-radius: 12px;
+}
+
+/* Estilos para a seção de Contato */
+#contact {
+    background-color: #8d9da1;
+    padding: em;
+    margin-top: 2em;
+    border-radius: 12px;
+    padding-bottom: 20px;
+    margin-bottom: 10px; /* Adicionada a margem inferior para afastar do rodapé */
+}
+
+/* Estilos para a seção de Recursos */
+section img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    margin-top: 1em;
+}
+
+/* Ajustes para melhorar a acessibilidade */
+button, a {
+    outline: none;
+}
+
+/* Estilos para a animação no cabeçalho h1 */
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+/* Estilos para a animação no rodapé */
+a:hover::after {
     transform: scaleX(1); /* Aumenta a largura da barra ao passar o mouse */
+}
 
-
+.titulo-header {
+    font-size: 30px;
+    padding-bottom: 5px;
 }
